@@ -15,13 +15,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import commonUtils.JavaUtil;
-
-
 
 public class AjioTest {
 
-	JavaUtil ju=new JavaUtil();
 	@Test
 	public void ajio1() throws IOException
 	{
@@ -58,8 +54,7 @@ public class AjioTest {
 		
 		TakesScreenshot ts = (TakesScreenshot)d;
 		File tempfile = ts.getScreenshotAs(OutputType.FILE);
-		int num = ju.getRandomNumber();
-	    File destfile = new File("./Ajio/bag.png"+num);
+	    File destfile = new File("./Ajio/bag.png");
 	    FileUtils.copyFile(tempfile, destfile);
 		
 		
